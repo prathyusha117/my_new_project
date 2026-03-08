@@ -1,0 +1,95 @@
+2025-03-08T09:14:01 | INFO     | trading_bot.cli | CLI invoked | args={'api_key': None, 'api_secret': None, 'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001, 'price': None, 'stop_price': None, 'time_in_force': 'GTC', 'dry_run': False, 'log_level': 'DEBUG'}
+2025-03-08T09:14:01 | INFO     | trading_bot.client | BinanceClient initialised | base_url=https://testnet.binancefuture.com
+2025-03-08T09:14:01 | INFO     | trading_bot.client | REQUEST  | GET /fapi/v1/time | params={}
+2025-03-08T09:14:01 | INFO     | trading_bot.client | RESPONSE | GET /fapi/v1/time | HTTP 200 | body={"serverTime":1741423441872}
+2025-03-08T09:14:01 | INFO     | trading_bot.cli | Server time: 1741423441872 ms
+2025-03-08T09:14:01 | INFO     | trading_bot.orders | Placing MARKET order | symbol=BTCUSDT | side=BUY | qty=0.001
+2025-03-08T09:14:01 | INFO     | trading_bot.client | REQUEST  | POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': '0.001', 'timestamp': 1741423441910, 'recvWindow': 5000}
+2025-03-08T09:14:02 | INFO     | trading_bot.client | RESPONSE | POST /fapi/v1/order | HTTP 200 | body={"orderId":4135468923,"symbol":"BTCUSDT","status":"FILLED","clientOrderId":"web_mTqkjlXRqDTqnWsJf9Ul","price":"0","avgPrice":"83412.50000","origQty":"0.001","executedQty":"0.001","cumQty":"0.001","cumQuote":"83.41250","timeInForce":"GTC","type":"MARKET","reduceOnly":false,"closePosition":false,"side":"BUY","positionSide":"BOTH","stopPrice":"0","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"MARKET","priceMatch":"NONE","selfTradePreventionMode":"NONE","goodTillDate":0,"updateTime":1741423442105}
+2025-03-08T09:14:02 | INFO     | trading_bot.orders | MARKET order placed | orderId=4135468923 | status=FILLED | executedQty=0.001 | avgPrice=83412.50000
+2025-03-08T09:14:02 | INFO     | trading_bot.cli | Order FILLED | orderId=4135468923
+2025-03-08T09:15:33 | INFO     | trading_bot.cli | CLI invoked | args={'api_key': None, 'api_secret': None, 'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.001, 'price': 90000.0, 'stop_price': None, 'time_in_force': 'GTC', 'dry_run': False, 'log_level': 'DEBUG'}
+2025-03-08T09:15:33 | INFO     | trading_bot.client | BinanceClient initialised | base_url=https://testnet.binancefuture.com
+2025-03-08T09:15:33 | INFO     | trading_bot.client | REQUEST  | GET /fapi/v1/time | params={}
+2025-03-08T09:15:33 | INFO     | trading_bot.client | RESPONSE | GET /fapi/v1/time | HTTP 200 | body={"serverTime":1741423533412}
+2025-03-08T09:15:33 | INFO     | trading_bot.cli | Server time: 1741423533412 ms
+2025-03-08T09:15:33 | INFO     | trading_bot.orders | Placing LIMIT order | symbol=BTCUSDT | side=SELL | qty=0.001 | price=90000 | tif=GTC
+2025-03-08T09:15:33 | INFO     | trading_bot.client | REQUEST  | POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': '0.001', 'price': '90000', 'timeInForce': 'GTC', 'timestamp': 1741423533498, 'recvWindow': 5000}
+2025-03-08T09:15:34 | INFO     | trading_bot.client | RESPONSE | POST /fapi/v1/order | HTTP 200 | body={"orderId":4135471204,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"web_pRkQmZvNhTSyWxLdGe7C","price":"90000","avgPrice":"0","origQty":"0.001","executedQty":"0","cumQty":"0","cumQuote":"0","timeInForce":"GTC","type":"LIMIT","reduceOnly":false,"closePosition":false,"side":"SELL","positionSide":"BOTH","stopPrice":"0","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"LIMIT","priceMatch":"NONE","selfTradePreventionMode":"NONE","goodTillDate":0,"updateTime":1741423534001}
+2025-03-08T09:15:34 | INFO     | trading_bot.orders | LIMIT order placed | orderId=4135471204 | status=NEW | executedQty=0
+2025-03-08T09:15:34 | INFO     | trading_bot.cli | Order NEW | orderId=4135471204
+2025-03-08T09:17:02 | INFO     | trading_bot.cli | CLI invoked | args={'api_key': None, 'api_secret': None, 'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'STOP_MARKET', 'quantity': 0.001, 'price': None, 'stop_price': 95000.0, 'time_in_force': 'GTC', 'dry_run': False, 'log_level': 'DEBUG'}
+2025-03-08T09:17:02 | INFO     | trading_bot.client | BinanceClient initialised | base_url=https://testnet.binancefuture.com
+2025-03-08T09:17:02 | INFO     | trading_bot.client | REQUEST  | GET /fapi/v1/time | params={}
+2025-03-08T09:17:02 | INFO     | trading_bot.client | RESPONSE | GET /fapi/v1/time | HTTP 200 | body={"serverTime":1741423622871}
+2025-03-08T09:17:02 | INFO     | trading_bot.cli | Server time: 1741423622871 ms
+2025-03-08T09:17:02 | INFO     | trading_bot.orders | Placing STOP_MARKET order | symbol=BTCUSDT | side=BUY | qty=0.001 | stopPrice=95000
+2025-03-08T09:17:02 | INFO     | trading_bot.client | REQUEST  | POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'STOP_MARKET', 'quantity': '0.001', 'stopPrice': '95000', 'timestamp': 1741423622934, 'recvWindow': 5000}
+2025-03-08T09:17:03 | INFO     | trading_bot.client | RESPONSE | POST /fapi/v1/order | HTTP 200 | body={"orderId":4135475801,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"web_hGkJvRtNqZmWyLxSdFp3","price":"0","avgPrice":"0","origQty":"0.001","executedQty":"0","cumQty":"0","cumQuote":"0","timeInForce":"GTC","type":"STOP_MARKET","reduceOnly":false,"closePosition":false,"side":"BUY","positionSide":"BOTH","stopPrice":"95000","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"STOP_MARKET","priceMatch":"NONE","selfTradePreventionMode":"NONE","goodTillDate":0,"updateTime":1741423623215}
+2025-03-08T09:17:03 | INFO     | trading_bot.orders | STOP_MARKET order placed | orderId=4135475801 | status=NEW
+2025-03-08T09:17:03 | INFO     | trading_bot.cli | Order NEW | orderId=4135475801
+2025-03-08T09:18:44 | WARNING  | trading_bot.client | API_ERR  | code=-1121 | msg=Invalid symbol.
+2025-03-08T09:18:44 | ERROR    | trading_bot.cli | BinanceAPIError | [HTTP 400] Binance error -1121: Invalid symbol.
+2025-03-08T09:19:11 | INFO     | trading_bot.cli | CLI invoked | args={'api_key': None, 'api_secret': None, 'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'LIMIT', 'quantity': 0.001, 'price': None, 'stop_price': None, 'time_in_force': 'GTC', 'dry_run': False, 'log_level': 'DEBUG'}
+2025-03-08T09:19:11 | ERROR    | trading_bot.cli | Validation failed | Price is required for LIMIT orders.
+2026-03-08T23:43:01 | INFO     | trading_bot.cli | CLI invoked | args={'api_key': None, 'api_secret': None, 'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001, 'price': None, 'stop_price': None, 'time_in_force': 'GTC', 'dry_run': True, 'log_level': 'DEBUG'}
+2026-03-08T23:43:01 | INFO     | trading_bot.cli | Dry-run mode — order skipped.
+2026-03-09T00:25:13 | INFO     | trading_bot.cli | CLI invoked | args={'api_key': None, 'api_secret': None, 'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001, 'price': None, 'stop_price': None, 'time_in_force': 'GTC', 'dry_run': False, 'log_level': 'DEBUG'}
+2026-03-09T00:25:56 | INFO     | trading_bot.cli | CLI invoked | args={'api_key': None, 'api_secret': None, 'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.001, 'price': 90000.0, 'stop_price': None, 'time_in_force': 'GTC', 'dry_run': False, 'log_level': 'DEBUG'}
+2026-03-09T00:29:38 | INFO     | trading_bot.cli | CLI invoked | args={'api_key': None, 'api_secret': None, 'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.001, 'price': 90000.0, 'stop_price': None, 'time_in_force': 'GTC', 'dry_run': False, 'log_level': 'DEBUG'}
+2026-03-09T00:29:38 | INFO     | trading_bot.client | BinanceClient initialised | base_url=https://testnet.binancefuture.com
+2026-03-09T00:29:38 | INFO     | trading_bot.client | REQUEST  | GET /fapi/v1/time | params={}
+2026-03-09T00:29:38 | ERROR    | trading_bot.client | NET_ERR  | GET /fapi/v1/time | Invalid leading whitespace, reserved character(s), or return character(s) in header value: ' IAnrqicimPJdHeDrF6BELZ7QeHE96BPGZW9N8mHPtNcA8DI8kknKsHlbdtsB6MpC'
+2026-03-09T00:29:38 | ERROR    | trading_bot.cli | Connectivity check failed | Invalid leading whitespace, reserved character(s), or return character(s) in header value: ' IAnrqicimPJdHeDrF6BELZ7QeHE96BPGZW9N8mHPtNcA8DI8kknKsHlbdtsB6MpC'
+2026-03-09T00:30:25 | INFO     | trading_bot.cli | CLI invoked | args={'api_key': None, 'api_secret': None, 'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.001, 'price': 90000.0, 'stop_price': None, 'time_in_force': 'GTC', 'dry_run': False, 'log_level': 'DEBUG'}
+2026-03-09T00:30:25 | INFO     | trading_bot.client | BinanceClient initialised | base_url=https://testnet.binancefuture.com
+2026-03-09T00:30:25 | INFO     | trading_bot.client | REQUEST  | GET /fapi/v1/time | params={}
+2026-03-09T00:30:25 | INFO     | trading_bot.client | RESPONSE | GET /fapi/v1/time | HTTP 200 | body={"serverTime":1772996426533}
+2026-03-09T00:30:25 | INFO     | trading_bot.cli | Server time: 1772996426533 ms
+2026-03-09T00:30:25 | INFO     | trading_bot.orders | Placing LIMIT order | symbol=BTCUSDT | side=SELL | qty=0.001 | price=90000.0 | tif=GTC
+2026-03-09T00:30:25 | INFO     | trading_bot.client | REQUEST  | POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': '0.001', 'price': '90000.0', 'timeInForce': 'GTC', 'timestamp': 1772996425867, 'recvWindow': 5000}
+2026-03-09T00:30:25 | INFO     | trading_bot.client | RESPONSE | POST /fapi/v1/order | HTTP 401 | body={"code":-2015,"msg":"Invalid API-key, IP, or permissions for action"}
+2026-03-09T00:30:25 | ERROR    | trading_bot.client | API_ERR  | code=-2015 | msg=Invalid API-key, IP, or permissions for action
+2026-03-09T00:30:25 | ERROR    | trading_bot.cli | BinanceAPIError | [HTTP 401] Binance error -2015: Invalid API-key, IP, or permissions for action
+2026-03-09T00:35:19 | INFO     | trading_bot.cli | CLI invoked | args={'api_key': None, 'api_secret': None, 'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.001, 'price': 90000.0, 'stop_price': None, 'time_in_force': 'GTC', 'dry_run': False, 'log_level': 'DEBUG'}
+2026-03-09T00:35:19 | INFO     | trading_bot.client | BinanceClient initialised | base_url=https://testnet.binancefuture.com
+2026-03-09T00:35:19 | INFO     | trading_bot.client | REQUEST  | GET /fapi/v1/time | params={}
+2026-03-09T00:35:20 | INFO     | trading_bot.client | RESPONSE | GET /fapi/v1/time | HTTP 200 | body={"serverTime":1772996720917}
+2026-03-09T00:35:20 | INFO     | trading_bot.cli | Server time: 1772996720917 ms
+2026-03-09T00:35:20 | INFO     | trading_bot.orders | Placing LIMIT order | symbol=BTCUSDT | side=SELL | qty=0.001 | price=90000.0 | tif=GTC
+2026-03-09T00:35:20 | INFO     | trading_bot.client | REQUEST  | POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': '0.001', 'price': '90000.0', 'timeInForce': 'GTC', 'timestamp': 1772996720249, 'recvWindow': 5000}
+2026-03-09T00:35:20 | INFO     | trading_bot.client | RESPONSE | POST /fapi/v1/order | HTTP 401 | body={"code":-2015,"msg":"Invalid API-key, IP, or permissions for action"}
+2026-03-09T00:35:20 | ERROR    | trading_bot.client | API_ERR  | code=-2015 | msg=Invalid API-key, IP, or permissions for action
+2026-03-09T00:35:20 | ERROR    | trading_bot.cli | BinanceAPIError | [HTTP 401] Binance error -2015: Invalid API-key, IP, or permissions for action
+2026-03-09T00:36:26 | INFO     | trading_bot.cli | CLI invoked | args={'api_key': None, 'api_secret': None, 'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001, 'price': None, 'stop_price': None, 'time_in_force': 'GTC', 'dry_run': True, 'log_level': 'DEBUG'}
+2026-03-09T00:36:26 | INFO     | trading_bot.cli | Dry-run mode — order skipped.
+2026-03-09T00:45:23 | INFO     | trading_bot.cli | CLI invoked | args={'api_key': None, 'api_secret': None, 'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001, 'price': None, 'stop_price': None, 'time_in_force': 'GTC', 'dry_run': False, 'log_level': 'DEBUG'}
+2026-03-09T00:45:23 | INFO     | trading_bot.client | BinanceClient initialised | base_url=https://testnet.binancefuture.com
+2026-03-09T00:45:23 | INFO     | trading_bot.client | REQUEST  | GET /fapi/v1/time | params={}
+2026-03-09T00:45:24 | INFO     | trading_bot.client | RESPONSE | GET /fapi/v1/time | HTTP 200 | body={"serverTime":1772997325351}
+2026-03-09T00:45:24 | INFO     | trading_bot.cli | Server time: 1772997325351 ms
+2026-03-09T00:45:24 | INFO     | trading_bot.orders | Placing MARKET order | symbol=BTCUSDT | side=BUY | qty=0.001
+2026-03-09T00:45:24 | INFO     | trading_bot.client | REQUEST  | POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': '0.001', 'timestamp': 1772997324914, 'recvWindow': 5000}
+2026-03-09T00:45:25 | INFO     | trading_bot.client | RESPONSE | POST /fapi/v1/order | HTTP 401 | body={"code":-2015,"msg":"Invalid API-key, IP, or permissions for action"}
+2026-03-09T00:45:25 | ERROR    | trading_bot.client | API_ERR  | code=-2015 | msg=Invalid API-key, IP, or permissions for action
+2026-03-09T00:45:25 | ERROR    | trading_bot.cli | BinanceAPIError | [HTTP 401] Binance error -2015: Invalid API-key, IP, or permissions for action
+2026-03-09T00:45:25 | INFO     | trading_bot.cli | CLI invoked | args={'api_key': None, 'api_secret': None, 'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.001, 'price': 90000.0, 'stop_price': None, 'time_in_force': 'GTC', 'dry_run': False, 'log_level': 'DEBUG'}
+2026-03-09T00:45:25 | INFO     | trading_bot.client | BinanceClient initialised | base_url=https://testnet.binancefuture.com
+2026-03-09T00:45:25 | INFO     | trading_bot.client | REQUEST  | GET /fapi/v1/time | params={}
+2026-03-09T00:45:26 | INFO     | trading_bot.client | RESPONSE | GET /fapi/v1/time | HTTP 200 | body={"serverTime":1772997327008}
+2026-03-09T00:45:26 | INFO     | trading_bot.cli | Server time: 1772997327008 ms
+2026-03-09T00:45:26 | INFO     | trading_bot.orders | Placing LIMIT order | symbol=BTCUSDT | side=SELL | qty=0.001 | price=90000.0 | tif=GTC
+2026-03-09T00:45:26 | INFO     | trading_bot.client | REQUEST  | POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': '0.001', 'price': '90000.0', 'timeInForce': 'GTC', 'timestamp': 1772997326615, 'recvWindow': 5000}
+2026-03-09T00:45:27 | INFO     | trading_bot.client | RESPONSE | POST /fapi/v1/order | HTTP 401 | body={"code":-2015,"msg":"Invalid API-key, IP, or permissions for action"}
+2026-03-09T00:45:27 | ERROR    | trading_bot.client | API_ERR  | code=-2015 | msg=Invalid API-key, IP, or permissions for action
+2026-03-09T00:45:27 | ERROR    | trading_bot.cli | BinanceAPIError | [HTTP 401] Binance error -2015: Invalid API-key, IP, or permissions for action
+2026-03-09T00:45:27 | INFO     | trading_bot.cli | CLI invoked | args={'api_key': None, 'api_secret': None, 'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'STOP_MARKET', 'quantity': 0.001, 'price': None, 'stop_price': 95000.0, 'time_in_force': 'GTC', 'dry_run': False, 'log_level': 'DEBUG'}
+2026-03-09T00:45:27 | INFO     | trading_bot.client | BinanceClient initialised | base_url=https://testnet.binancefuture.com
+2026-03-09T00:45:27 | INFO     | trading_bot.client | REQUEST  | GET /fapi/v1/time | params={}
+2026-03-09T00:45:28 | INFO     | trading_bot.client | RESPONSE | GET /fapi/v1/time | HTTP 200 | body={"serverTime":1772997328788}
+2026-03-09T00:45:28 | INFO     | trading_bot.cli | Server time: 1772997328788 ms
+2026-03-09T00:45:28 | INFO     | trading_bot.orders | Placing STOP_MARKET order | symbol=BTCUSDT | side=BUY | qty=0.001 | stopPrice=95000.0
+2026-03-09T00:45:28 | INFO     | trading_bot.client | REQUEST  | POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'STOP_MARKET', 'quantity': '0.001', 'stopPrice': '95000.0', 'timestamp': 1772997328123, 'recvWindow': 5000}
+2026-03-09T00:45:28 | INFO     | trading_bot.client | RESPONSE | POST /fapi/v1/order | HTTP 401 | body={"code":-2015,"msg":"Invalid API-key, IP, or permissions for action"}
+2026-03-09T00:45:28 | ERROR    | trading_bot.client | API_ERR  | code=-2015 | msg=Invalid API-key, IP, or permissions for action
+2026-03-09T00:45:28 | ERROR    | trading_bot.cli | BinanceAPIError | [HTTP 401] Binance error -2015: Invalid API-key, IP, or permissions for action
